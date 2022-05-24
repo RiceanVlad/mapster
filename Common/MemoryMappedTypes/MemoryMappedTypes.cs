@@ -1,4 +1,4 @@
-﻿using System.Runtime.InteropServices;
+using System.Runtime.InteropServices;
 
 namespace Mapster.Common.MemoryMappedTypes;
 
@@ -104,6 +104,27 @@ public enum GeometryType : byte
     Polyline,
     Polygon,
     Point
+}
+
+// added an enumerator to store all the possible types of drawable terrain
+// this will help eliminate the overhead caused by using strings
+public enum LandTypes: int
+{
+        building,
+        admin_level,
+        amenity,
+        boundary,
+        farm,
+        highway,
+        landuse,
+        leisure,
+        name,
+        natural,
+        place,
+        railway,
+        reservoir,
+        residential,
+        water
 }
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
